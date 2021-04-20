@@ -90,7 +90,11 @@ def predict_diabetes():
 
 
 
+if __name__ == '__main__':
+	parser = argparse.ArgumentParser()
+	parser.add_argument("-p", "--port", type=int, default=8080)
+	args = parser.parse_args()
+	start_server(port=args.port)
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
